@@ -9,6 +9,9 @@ dependencies = [
     "ruff>=0.3.0",
     "mypy>=1.8.0",
     "isort>=6.0.1",
+    "beautifulsoup4>=4.13.3",
+    "polars>=1.23.0",
+    "ipykernel>=6.29.5",
 ]
 
 [tool.ruff]
@@ -35,6 +38,7 @@ exclude = [
     "dist",
     "node_modules",
     "venv",
+    "*.ipynb",
 ]
 # Same as Black
 line-length = 88
