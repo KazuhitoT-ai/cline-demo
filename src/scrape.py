@@ -1,7 +1,7 @@
 """
 Module for web scraping functionality.
 """
-from fetch import fetch_html
+from src.fetch import fetch_html
 
 
 def extract_links(html: str) -> list[str]:
