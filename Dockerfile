@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         git \
         clang \
         curl \
-        gcc
+        gcc \
+        vim
 
 # https://github.com/cli/cli/blob/960f533234dcf327e1e9456c417f0b81ad09647c/docs/install_linux.md
 RUN (type -p wget >/dev/null || (apt update && apt-get install wget -y)) \
