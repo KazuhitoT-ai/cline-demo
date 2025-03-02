@@ -1,5 +1,7 @@
 import urllib.error
 import urllib.request
+import argparse
+import sys
 from typing import cast
 
 
@@ -25,3 +27,22 @@ def fetch_html(url: str) -> str:
     except (urllib.error.URLError, urllib.error.HTTPError) as e:
         print(f"Error fetching URL {url}: {e}")
         raise
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Fetch HTML from a URL")
+    parser.add_argument("url", help="URL to fetch HTML from")
+    parser.add_argument("-o", "--output", help="Output file (default: stdout)")
+    args = parser.parse_args()
+
+    try:
+        html = fetch_html(args.url)
+        if args.output:
+            with open(args.output, "w", encoding="utf-8") as f:
+                f.write(html)
+            print(f"HTML saved to {args.output}")
+        else:
+            print(html)
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
