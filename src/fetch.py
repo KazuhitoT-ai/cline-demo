@@ -1,7 +1,7 @@
-import urllib.error
-import urllib.request
 import argparse
 import sys
+import urllib.error
+import urllib.request
 from typing import cast
 
 
