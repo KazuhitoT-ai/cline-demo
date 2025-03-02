@@ -13,8 +13,9 @@
 - パッケージ管理は uv で行っている。必要なパッケージがあれば uv を使ってインストールすること。
 - `uv pip` は使用しないこと。代わりに `uv add/remove/sync` 等を使ってパッケージを管理すること。
 - python を実行する際は `python` を実行する代わりに `uv run` を実行すること。
-- Linter は `uv run ruff check` を使ってください。
-- 型チェックには `uv run mypy` を使ってください。
+- Linter は `uv run ruff check` を使用すること。
+- 型チェックには `uv run mypy` を使用すること。
+- コマンド実行時に不要な出力が発生する場合は .devnull フォルダに出力するようにすること。
 
 
 ## Gitワークフロー
