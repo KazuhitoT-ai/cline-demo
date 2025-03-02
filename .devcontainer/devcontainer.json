@@ -1,0 +1,6 @@
+{
+	"name": "kazuhitot-ai demo project for cline with claude",
+	"build": {
+		"dockerfile": "../Dockerfile" // 相対パス表記
+	}
+}
