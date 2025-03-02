@@ -2,7 +2,7 @@ from urllib.error import URLError
 
 import pytest
 
-from fetch import fetch_html
+from src.fetch import fetch_html
 
 
 def test_fetch_html_example_site() -> None:
